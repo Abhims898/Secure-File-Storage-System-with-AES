@@ -13,13 +13,21 @@ A web-based application for securely encrypting and decrypting files using AES-2
 
 ## Deployment on Render
 
+### Method 1: Using GitHub Repository
 1. Fork or upload this repository to your GitHub account
 2. Create a new Web Service on Render
 3. Connect your GitHub repository
 4. Use the following settings:
    - Build Command: `pip install -r requirements.txt`
-   - Start Command: `python app.py`
+   - Start Command: `gunicorn app:app`
 5. Click "Create Web Service"
+
+### Method 2: Using Render Blueprint
+1. Fork or upload this repository to your GitHub account
+2. Ensure your repository includes the `render.yaml` file
+3. Go to the Render Dashboard and click "New Blueprint Instance"
+4. Connect your GitHub repository
+5. Render will automatically detect the `render.yaml` file and configure the service
 
 ## Local Development
 
