@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: secure-file-storage
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
-    envVars:
-      - key: MASTER_KEY_B64
-        sync: false
