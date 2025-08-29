@@ -1,1 +1,0 @@
-UI rendered inline from app.py
